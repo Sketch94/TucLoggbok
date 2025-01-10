@@ -1,0 +1,49 @@
+﻿<Window x:Class="TucLoggbok.UserPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TucLoggbok"
+      mc:Ignorable="d" 
+        WindowStyle="SingleBorderWindow"
+      MouseDown="Window_MouseDown"
+      SizeToContent="WidthAndHeight"  
+      MinHeight="600" MinWidth="900"
+      Title="Användare - Kunskapskällan" Icon="pack://application:,,,/TucLoggBok;component/Media/Icons/User_Icon.png">
+
+    <Border Padding="10">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" MinHeight="225"></RowDefinition>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="40*"/>
+                <ColumnDefinition Width="149*"/>
+                <ColumnDefinition Width="auto" MinWidth="523"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Row="1" Grid.Column="2" >
+                <ListBox x:Name="LoanHistoryListBox" Style="{StaticResource RoundedListBox}" MaxHeight="400" />
+            </ScrollViewer>
+
+            <TextBlock x:Name="WelcomeMessageTextBlock" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="16,11,0,0" FontSize="16" FontFamily="Poppins" Height="67" Width="261" TextWrapping="Wrap" Text="Välkommen" Grid.Column="1"/>
+
+
+            <Button Grid.Column="0" Margin="10,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Cursor="Hand" Height="40" Width="40" Click="HomeButton_Click">
+                <Image Source="pack://application:,,,/TucLoggbok;component/Media/Buttons/Home.png"/>
+            </Button>
+
+            <TextBox x:Name="SearchTextBox" Style="{StaticResource RoundedSearchTextBox}" Grid.Column="2" Width="200" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="60,0,0,20" KeyDown="SearchTextBox_KeyDown" />
+            <Button Content="Sök"  Grid.Column="2" Width="50" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="0,0,0,17" Click="SearchBook_Click" />
+
+            <Button Content="Låna bok" Name="BorrowBookButton" Grid.Column="2" Width="70" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="327,0,0,80" Click="BorrowBook_Click"/>
+            <Button Content="Återlämna bok" Name="ReturnBookButton"  Grid.Column="2" Width="90" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="317,0,0,17" Click="ReturnBook_Click"/>
+            <Button Content="Radera logg" Grid.Column="1" Grid.Row="1" Width="100" Height="70" HorizontalAlignment="Left" VerticalAlignment="Bottom" Click="ClearLog_Click" />
+            <Button Content="Uppdatera logg" Grid.Column="1" Grid.Row="1" Width="100" Height="70" HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="UpdateLog_Click" Margin="0,0,20,100" />
+            <Button Content="Visa lånehistorik" Grid.Row="1" Width="100" Height="70" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,20,0" Click="ShowLoanHistory_Click" Grid.Column="1"/>
+
+        </Grid>
+    </Border>
+</Window>

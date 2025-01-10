@@ -1,0 +1,23 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style TargetType="ListBox" x:Key="RoundedListBox">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ListBox">
+
+                    <Border CornerRadius="5"
+                        BorderThickness="2"
+                        BorderBrush="Gray"
+                        Background="WhiteSmoke"
+                        Padding="2"
+                        Cursor="Hand">
+                        <ScrollViewer>
+                            <ItemsPresenter/>
+                        </ScrollViewer>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

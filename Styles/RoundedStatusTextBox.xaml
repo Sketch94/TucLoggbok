@@ -1,0 +1,46 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style TargetType="TextBox" x:Key="RoundedStatusTextBox">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TextBox">
+                    <Border CornerRadius="5"
+                        BorderThickness="2"
+                        BorderBrush="Gray"
+                        Background="WhiteSmoke"
+                        Padding="2"
+                        Cursor="IBeam">
+                        <Grid>
+                            <!-- Scrollviewer gör textbox klickbar -->
+                            <ScrollViewer x:Name="PART_ContentHost"/>
+                            <TextBlock x:Name="PlaceholderText"
+                                        Text="Ange status... (Tillgänglig)/(Utlånad)" 
+                                       Margin="5,0,0,0"
+                                        Foreground="Gray"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Left"
+                                       FontStyle="Italic"
+                                       IsHitTestVisible="False"
+                                       Visibility="Collapsed">
+
+                            </TextBlock>
+                        </Grid>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <!-- Placeholder texten döjls när textbox är fokuserad -->
+                        <Trigger Property="Text" Value="">
+                            <Setter TargetName="PlaceholderText" Property="Visibility" Value="Visible"/>
+                        </Trigger>
+
+                        <!-- När textbox är tom och man klickar på en knapp eller listbox så visas placeholder -->
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter TargetName="PlaceholderText" Property="Visibility" Value="Collapsed"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

@@ -1,0 +1,95 @@
+﻿<Window x:Class="TucLoggbok.AdminProfilePage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TucLoggbok"
+        mc:Ignorable="d"
+        WindowStyle="SingleBorderWindow"
+        
+        MouseDown="Window_MouseDown"
+        MinHeight="500" MinWidth="900"
+        Title="Administratörprofil - Kunskapskällan" ResizeMode="NoResize" Icon="pack://application:,,,/TucLoggBok;component/Media/Icons/editProfilePic_Icon.png">
+
+    <Border Padding="10">
+        <Grid>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="364*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="294*"/>
+            </Grid.RowDefinitions>
+
+
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Height="400" Width="300" Margin="50,50,50,0" Grid.RowSpan="2">
+                <Label Content="Välj ikon" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" FontFamily="Poppins"/>
+
+                <ScrollViewer VerticalScrollBarVisibility="Auto" Height="300" CanContentScroll="True" Width="300" >
+                    <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top">
+                        <Button Margin="10" Width="70" Height="70" Click="ProfileIcon_Click">
+                            <Border BorderBrush="black" BorderThickness="2" CornerRadius="35" Width="60" Height="60">
+                                <Image Source="pack://application:,,,/TucLoggbok;component/Media/Administrator/user.png" Stretch="UniformToFill"/>
+                            </Border>
+                        </Button>
+                        <Button Margin="10" Width="70" Height="70" Click="ProfileIcon_Click">
+                            <Border BorderBrush="black" BorderThickness="2" CornerRadius="35" Width="60" Height="60">
+                                <Image Source="pack://application:,,,/TucLoggbok;component/Media/Administrator/user0.png" Stretch="UniformToFill"/>
+                            </Border>
+                        </Button>
+
+                        <Button Margin="10" Width="70" Height="70" Click="ProfileIcon_Click">
+                            <Border BorderBrush="black" BorderThickness="2" CornerRadius="35" Width="60" Height="60">
+                                <Image Source="pack://application:,,,/TucLoggbok;component/Media/Administrator/user1.png" Stretch="UniformToFill"/>
+                            </Border>
+                        </Button>
+                        <Button Margin="10" Width="70" Height="70" Click="ProfileIcon_Click">
+                            <Border BorderBrush="black" BorderThickness="2" CornerRadius="35" Width="60" Height="60">
+                                <Image Source="pack://application:,,,/TucLoggbok;component/Media/Administrator/user2.png" Stretch="UniformToFill" Margin="-1,-2,0,0"/>
+                            </Border>
+                        </Button>
+                        <Button Margin="10" Width="70" Height="70" Click="ProfileIcon_Click">
+                            <Border BorderBrush="black" BorderThickness="2" CornerRadius="35" Width="60" Height="60">
+                                <Image Source="pack://application:,,,/TucLoggbok;component/Media/Administrator/user3.png" Stretch="UniformToFill"/>
+                            </Border>
+                        </Button>
+                        <Button Margin="10" Width="70" Height="70" Click="ProfileIcon_Click">
+                            <Border BorderBrush="black" BorderThickness="2" CornerRadius="35" Width="60" Height="60">
+                                <Image Source="pack://application:,,,/TucLoggbok;component/Media/Administrator/user4.png" Stretch="UniformToFill"/>
+                            </Border>
+                        </Button>
+                        <Button Margin="10" Width="70" Height="70" Click="ProfileIcon_Click">
+                            <Border BorderBrush="black" BorderThickness="2" CornerRadius="35" Width="60" Height="60">
+                                <Image Source="pack://application:,,,/TucLoggbok;component/Media/Administrator/user5.png" Stretch="UniformToFill"/>
+                            </Border>
+                        </Button>
+
+                        <Button Margin="10" Width="70" Height="70" Click="ProfileIcon_Click">
+                            <Border BorderBrush="black" BorderThickness="2" CornerRadius="0" Width="60" Height="60">
+                                <Image Source="pack://application:,,,/TucLoggbok;component/Media/Administrator/user6.png" Stretch="UniformToFill"/>
+                            </Border>
+                        </Button>
+                        <Button Margin="10" Width="70" Height="70" Click="ProfileIcon_Click">
+                            <Border BorderBrush="black" BorderThickness="2" CornerRadius="0" Width="60" Height="60">
+                                <Image Source="pack://application:,,,/TucLoggbok;component/Media/Administrator/user7.png" Stretch="UniformToFill"/>
+                            </Border>
+                        </Button>
+                        <Button Margin="10" Width="70" Height="70" Click="ProfileIcon_Click">
+                            <Border BorderBrush="black" BorderThickness="2" CornerRadius="0" Width="60" Height="60">
+                                <Image Source="pack://application:,,,/TucLoggbok;component/Media/Administrator/user8.png" Stretch="UniformToFill"/>
+                            </Border>
+                        </Button>
+                    </WrapPanel>
+
+                </ScrollViewer>
+
+            </StackPanel>
+
+            <Button Grid.Column="0" Margin="10" VerticalAlignment="Top" HorizontalAlignment="Left" Cursor="Hand" Height="40" Width="40" Click="HomeButton_Click">
+                <Image Source="pack://application:,,,/TucLoggbok;component/Media/Buttons/Home.png"/>
+            </Button>
+
+        </Grid>
+    </Border>
+</Window>

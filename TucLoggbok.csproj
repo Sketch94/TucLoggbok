@@ -1,0 +1,111 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="home.png" />
+    <None Remove="Media\Administrator\cogwheel.png" />
+    <None Remove="Media\Administrator\user.png" />
+    <None Remove="Media\Administrator\user0.png" />
+    <None Remove="Media\Administrator\user1.png" />
+    <None Remove="Media\Administrator\user2.png" />
+    <None Remove="Media\Administrator\user3.png" />
+    <None Remove="Media\Administrator\user4.png" />
+    <None Remove="Media\Administrator\user5.png" />
+    <None Remove="Media\Administrator\user6.png" />
+    <None Remove="Media\Administrator\user7.png" />
+    <None Remove="Media\Administrator\user8.png" />
+    <None Remove="Media\Buttons\.png" />
+    <None Remove="Media\Buttons\Cancel.png" />
+    <None Remove="Media\Buttons\eye_closed.png" />
+    <None Remove="Media\Buttons\eye_open.png" />
+    <None Remove="Media\Buttons\Home.png" />
+    <None Remove="Media\cogwheel.png" />
+    <None Remove="Media\home.png" />
+    <None Remove="Media\Icons\editbook_Icon.png" />
+    <None Remove="Media\Icons\editProfilePic_Icon.png" />
+    <None Remove="Media\Icons\loginPage_Icon.png" />
+    <None Remove="Media\Icons\registration_Icon.png" />
+    <None Remove="Media\Icons\User_Icon.png" />
+    <None Remove="Media\profile.png" />
+    <None Remove="Media\user.png" />
+    <None Remove="Media\user1.png" />
+    <None Remove="Media\user10.png" />
+    <None Remove="Media\user11.png" />
+    <None Remove="Media\user12.png" />
+    <None Remove="Media\user2.png" />
+    <None Remove="Media\user3.png" />
+    <None Remove="Media\user4.png" />
+    <None Remove="Media\user5.png" />
+    <None Remove="Media\user6.png" />
+    <None Remove="Media\user7.png" />
+    <None Remove="Media\user8.png" />
+    <None Remove="Media\user9.png" />
+    <None Remove="Media\Users\cogwheel.png" />
+    <None Remove="Media\Users\user.png" />
+    <None Remove="Media\Users\user0.png" />
+    <None Remove="Media\Users\user1.png" />
+    <None Remove="Media\Users\user10.png" />
+    <None Remove="Media\Users\user11.png" />
+    <None Remove="Media\Users\user12.png" />
+    <None Remove="Media\Users\user2.png" />
+    <None Remove="Media\Users\user3.png" />
+    <None Remove="Media\Users\user4.png" />
+    <None Remove="Media\Users\user5.png" />
+    <None Remove="Media\Users\user6.png" />
+    <None Remove="Media\Users\user7.png" />
+    <None Remove="Media\Users\user8.png" />
+    <None Remove="Media\Users\user9.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Azure.Core" Version="1.44.1" />
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.2" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.9.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Media\Administrator\cogwheel.png" />
+    <Resource Include="Media\Administrator\user.png" />
+    <Resource Include="Media\Administrator\user0.png" />
+    <Resource Include="Media\Administrator\user1.png" />
+    <Resource Include="Media\Administrator\user2.png" />
+    <Resource Include="Media\Administrator\user3.png" />
+    <Resource Include="Media\Administrator\user4.png" />
+    <Resource Include="Media\Administrator\user5.png" />
+    <Resource Include="Media\Administrator\user6.png" />
+    <Resource Include="Media\Administrator\user7.png" />
+    <Resource Include="Media\Administrator\user8.png" />
+    <Resource Include="Media\Buttons\eye_closed.png" />
+    <Resource Include="Media\Buttons\eye_open.png" />
+    <Resource Include="Media\Buttons\Home.png" />
+    <Resource Include="Media\Icons\editbook_Icon.png" />
+    <Resource Include="Media\Icons\editProfilePic_Icon.png" />
+    <Resource Include="Media\Icons\loginPage_Icon.png" />
+    <Resource Include="Media\Icons\registration_Icon.png" />
+    <Resource Include="Media\Icons\User_Icon.png" />
+    <Resource Include="Media\Users\cogwheel.png" />
+    <Resource Include="Media\Users\user.png" />
+    <Resource Include="Media\Users\user0.png" />
+    <Resource Include="Media\Users\user1.png" />
+    <Resource Include="Media\Users\user10.png" />
+    <Resource Include="Media\Users\user11.png" />
+    <Resource Include="Media\Users\user12.png" />
+    <Resource Include="Media\Users\user2.png" />
+    <Resource Include="Media\Users\user3.png" />
+    <Resource Include="Media\Users\user4.png" />
+    <Resource Include="Media\Users\user5.png" />
+    <Resource Include="Media\Users\user6.png" />
+    <Resource Include="Media\Users\user7.png" />
+    <Resource Include="Media\Users\user8.png" />
+    <Resource Include="Media\Users\user9.png" />
+  </ItemGroup>
+
+</Project>

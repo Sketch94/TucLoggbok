@@ -1,0 +1,59 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <SolidColorBrush x:Key="TransparentBrush" Color="Transparent"/>
+
+    <CubicEase x:Key="EaseInOut" EasingMode="EaseInOut"/>
+
+    <!-- Knapparnas stil med färgövergång-->
+    <Style TargetType="Button">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="ButtonBorder"  
+                        CornerRadius="5"
+                        BorderThickness="2"
+                        BorderBrush="Gray"
+                        Background="{StaticResource TransparentBrush}"
+                        Padding="2"
+                        Cursor="Hand">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+
+                    <!-- Bakgrundsfärgen på knappar får färgen grå när musen hovras över dem -->
+                    <ControlTemplate.Resources>
+                        <Storyboard x:Key="MouseOverBackgroundAnimation">
+                            <ColorAnimation Storyboard.TargetName="ButtonBorder"
+                                            Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                            To="Gray"
+                                            Duration="0:0:0:0"
+                                            EasingFunction="{StaticResource EaseInOut}"/>
+                        </Storyboard>
+
+                        <!-- Knappen övergår till Transparent när musen lämnar knappen -->
+                        <Storyboard x:Key="MouseLeaveBackgroundAnimation">
+                            <ColorAnimation Storyboard.TargetName="ButtonBorder"
+                                            Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
+                                            To="Transparent"
+                                            Duration="0:0:0:0.2"
+                                            EasingFunction="{StaticResource EaseInOut}"/>
+                        </Storyboard>
+                    </ControlTemplate.Resources>
+
+                    <!-- Detta styr animationerna och när de ska starta -->
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard Storyboard="{StaticResource MouseOverBackgroundAnimation}"/>
+                            </Trigger.EnterActions>
+
+                            <Trigger.ExitActions>
+                                <BeginStoryboard Storyboard="{StaticResource MouseLeaveBackgroundAnimation}"/>
+                            </Trigger.ExitActions>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

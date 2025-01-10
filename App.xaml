@@ -1,0 +1,29 @@
+﻿<Application x:Class="TucLoggbok.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:TucLoggbok"
+             StartupUri="LoginPage.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/RoundedButtons.xaml"/>
+                <ResourceDictionary Source="Styles/RoundedSearchTextBox.xaml"/>
+                <ResourceDictionary Source="Styles/ListBoxStyle.xaml"/>
+                <ResourceDictionary Source="Styles/RoundedPasswordBox.xaml"/>
+                <ResourceDictionary Source="Styles/RoundedTextBox.xaml"/>
+                <ResourceDictionary Source="Styles/ToggleButtonHover.xaml"/>
+                <ResourceDictionary Source="Styles/EditButtonHover.xaml"/>
+                <ResourceDictionary Source="Styles/RoundedTitleTextBox.xaml"/>
+                <ResourceDictionary Source="Styles/RoundedAuthorTextBox.xaml"/>
+                <ResourceDictionary Source="Styles/RoundedISBNTextBox.xaml"/>
+                <ResourceDictionary Source="Styles/RoundedStatusTextBox.xaml"/>
+
+                <ResourceDictionary Source="Styles/RoundedUpdatedTitleTextBox.xaml"/>
+                <ResourceDictionary Source="Styles/RoundedUpdatedAuthorTextBox.xaml"/>
+                <ResourceDictionary Source="Styles/RoundedUpdatedISBNTextBox.xaml"/>
+                <ResourceDictionary Source="Styles/RoundedUpdatedStatusTextBox.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+         
+    </Application.Resources>
+</Application>
